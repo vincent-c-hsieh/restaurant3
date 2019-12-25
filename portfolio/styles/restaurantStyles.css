@@ -35,6 +35,8 @@ footer div p {
   text-align: center;
 }
 
+/* background and description css*/
+
 .descriptionSection {
   margin: 0 20%;
 }
@@ -61,4 +63,43 @@ a:visited {
 
 a:active {
   text-decoration-line: none;
+}
+
+/* carousel css */
+
+.centerImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+}
+
+.resizeImg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .carousel-caption h2 {
+    font-size: 125%;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-caption h2 {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .carousel-caption h2 {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel-caption h2 {
+    font-size: 25%;
+  }
 }

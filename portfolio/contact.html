@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial scale=1, shrink to fit=no">
+    <meta name="viewport" content="width=device-width">
     <title>Contact Us</title>
     <!-- bootstrap cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -14,28 +14,27 @@
       .formContainer{
         margin: 50px 20%
       }
-      label {
-        width: 35%;
+
+      .enableJs h6{
+        text-align: center;
+        color: red;
+        font-size: 16px;
+        text-decoration: inherit;
       }
-      textarea{
-        width: 100%;
-        height: 150px;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        resize: none;
+
+      .contactTitle p{
+        font-weight: bold;
+        font-size: 200%;
+        text-align: center;
+        margin:40px 0;
+        font-style: italic;
+        text-decoration: underline;
       }
-      .contactDayForm label{
-        width: 7%;
-      }
-      #questionForDay {
-        width: 35%;
-      }
-      .nameForm , .emailForm, .phoneForm label {
+
+      .nameForm, .emailForm, .phoneForm label {
         font-weight: bold;
       }
+
     </style>
   </head>
   <body>
@@ -62,58 +61,96 @@
       </ul>
     </div>
     <hr>
+    <div class="contactTitle">
+      <p>Contact Us</p>
+      <noscript>
+        <div class="enableJs">
+          <h6>**Make Sure to allow JavaScript to best view the site!**</h6>
+        </div>
+      </noscript>
+    </div>
     <div class="formContainer">
-      <form class="form" action="submit.html" method="post">
-        <div class="nameForm">
+
+      <!-- d
+      <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+      </form>
+       -->
+      <form name="myForm" class="form" onsubmit="return validateForm()" action="submit.html" method="post">
+        <div class="form-group nameForm">
           <label for="name">Name: </label>
-          <input type="text" name="name" value="" required> <br> <br>
+          <input name="name" type="text" id="name" class="form-control" aria-describedby="nameHelp" placeholder="Enter Name">
+          <small id="nameHelp" class="form-text text-muted">Required field. We'll never share your name with anyone else.</small>
         </div>
-        <div class="emailForm">
+        <div class="form-group emailForm">
           <label for="email">Email: </label>
-          <input type="text" name="email" value="" required> <br> <br>
+          <input name="email" type="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter Email">
+          <small id="emailHelp" class="form-text text-muted">Required field. We'll never share your email with anyone else.</small>
         </div>
-        <div class="phoneForm">
+        <div class="form-group phoneForm">
           <label for="phone">Phone: </label>
-          <input type="text" name="phone" value="" required> <br> <br>
+          <input name="phone" type="text" id="phone" class="form-control" aria-describedby="phoneHelp" placeholder="Enter phone Number">
+          <small id="phoneHelp" class="form-text text-muted">Required field. We'll never share your phone number with anyone else.</small>
         </div>
         <div class="inquiryForm">
           <label for="reasonInquiry">Reason for Inquiry: </label>
-          <select class="Inquiry" name="">
+          <select class="form-control Inquiry" name="">
             <option value="catering" selected>Catering</option>
             <option value="privateParty">Private Party</option>
             <option value="Feedback">Feed back</option>
             <option value="other">Other</option>
-          </select> <br> <br>
+          </select> <br>
         </div>
         <div class="addInfoForm">
           <label for="additionInfo">Addition Information: </label>
-          <textarea name="name" rows="8" cols="80"></textarea> <br> <br>
+          <textarea class="form-control" id="additionInfo" rows="5" cols="80"></textarea> <br>
         </div>
         <div class="questionForm">
           <label for="question">Have you been to the restaurant? </label>
-          <div class="">
-            <input type="radio" id="choice1" name="questionnaire" value="no">
-            <label for="choice1">No</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="BeenToRestaurant" id="no" value="no">
+              <label class="form-check-label" for="no">
+                No
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="BeenToRestaurant" id="yes" value="yes">
+              <label class="form-check-label" for="yes">
+                Yes
+              </label>
+            </div>
           </div>
-          <div class="">
-            <input type="radio"id="choice2" name="questionnaire" value="yes">
-            <label for="choice2">Yes</label> <br><br>
-          </div>
-        </div>
-        <div class="contactDayForm">
+          <br>
+        <div class="dayToContact">
           <label for="contactDay" id="questionForDay">Best day to contact you: </label>
-          <input type="checkbox" id="monday" name="monday" value="monday">
-          <label for="monday">M</label>
-          <input type="checkbox" id="tuesday" name="tuesday" value="tuesday">
-          <label for="tuesday">T</label>
-          <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">
-          <label for="wednesday">W</label>
-          <input type="checkbox" id="thrusday" name="thrusday" value="thrusday">
-          <label for="thrusday">Th</label>
-          <input type="checkbox" id="friday" name="friday" value="friday">
-          <label for="friday">F</label> <br> <br>
+          <div class="form-check">
+            <div class="row">
+              <div class="col-sm-2">
+                <input class="form-check-input" type="checkbox" id="monday" name="monday" value="monday">
+                <label class="form-check-label" for="monday">M</label>
+              </div>
+              <div class="col-sm-2">
+                <input class="form-check-input" type="checkbox" id="tuesday" name="tuesday" value="tuesday">
+                <label class="form-check-label" for="tuesday">T</label>
+              </div>
+              <div class="col-sm-2">
+                <input class="form-check-input" type="checkbox" id="wednesday" name="wednesday" value="wednesday">
+                <label class="form-check-label" for="wednesday">W</label>
+              </div>
+              <div class="col-sm-2">
+                <input class="form-check-input" type="checkbox" id="thrusday" name="thrusday" value="thrusday">
+                <label class="form-check-label" for="thrusday">Th</label>
+              </div>
+              <div class="col-sm-2">
+                <input class="form-check-input" type="checkbox" id="friday" name="friday" value="friday">
+                <label class="form-check-label" for="friday">F</label>
+              </div>
+            </div>
+            <br>
+          </div>
         </div>
-        <input type="submit" name="submit" value="Send Request">
+        <input class="btn btn-primary" type="submit" name="submit" value="Send Request">
       </form>
     </div>
     <hr>
@@ -123,11 +160,11 @@
         <p>123-456-7890</p>
       </div>
     </footer>
+    <!-- script from scripts file -->
+    <script src="scripts/script.js"></script>
     <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/esm/popper-utils.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap-grid.css"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>

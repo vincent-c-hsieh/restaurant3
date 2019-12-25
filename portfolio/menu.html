@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial scale=1, shrink to fit=no">
+    <meta name="viewport" content="width=device-width">
     <title>Vincent's Restaurant's Menu</title>
     <!-- bootstrap cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -15,6 +15,15 @@
     <style media="screen">
       article {
         margin: 30px 10%;
+      }
+
+      .menuTitle {
+        font-weight: bold;
+        font-size: 200%;
+        text-align: center;
+        margin:40px 0 0;
+        font-style: italic;
+        text-decoration: underline;
       }
 
       .row {
@@ -30,6 +39,10 @@
 
       .menuItem p {
         text-align: center;
+      }
+
+      .italic {
+        font-style: italic;
       }
 
       body {
@@ -74,24 +87,27 @@
     <hr>
     <section>
       <article class="">
+        <div class="menuTitle">
+          <p>Menu</p>
+        </div>
         <h2 class="foodCategory">Main Course</h2>
         <div class="container">
           <div class="row">
-            <div class="col-sm-4 menuItem">
+            <div class="col-md-4 menuItem">
               <h4>Burger and Fries</h4>
-              <p>An American Classic!</p>
+              <p class="italic">An American Classic!</p>
               <p>Your choice - with or without cheese, Pickle, onion, tomato, and lettuce, Served with our famous thick cut french fries</p>
               <p>$7.95</p>
             </div>
-            <div class="col-sm-4 menuItem">
+            <div class="col-md-4 menuItem">
               <h4>Hot Dog and Chips</h4>
-              <p>A Summer Classic!</p>
+              <p class="italic">A Summer Classic!</p>
               <p>Your choice - white or wheat bun, Relish, mustard, and ketchup, Served with our house-made chips</p>
               <p>$7.95</p>
             </div>
-            <div class="col-sm-4 menuItem">
+            <div class="col-md-4 menuItem">
               <h4>Italian Sausage and Peppers</h4>
-              <p>An all-Time Favorite!</p>
+              <p class="italic">An all-Time Favorite!</p>
               <p>Your choice - mild or spicy Cole Slaw, Served with garlic mashers</p>
               <p>$10.95</p>
             </div>
@@ -99,21 +115,21 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-sm-4 menuItem">
+            <div class="col-md-4 menuItem">
               <h4>Tenderloin Sandwich and Chips</h4>
-              <p>Really Hits the Spot!</p>
+              <p class="italic">Really Hits the Spot!</p>
               <p>Plain of Sesame Seed Bun, Pickle, onion, tomato, and lettuce, Served with our house-made chips</p>
               <p>$8.95</p>
             </div>
-            <div class="col-sm-4 menuItem">
+            <div class="col-md-4 menuItem">
               <h4>House Salad</h4>
-              <p>On the Lighter Side</p>
+              <p class="italic">On the Lighter Side</p>
               <p>Your choice - with or without cheese, Iceberg lettuce, tomatoes, peppers, Thousand Island or Ranch, dressing Served with a dinner roll</p>
               <p>$6.95</p>
             </div>
-            <div class="col-sm-4 menuItem">
+            <div class="col-md-4 menuItem">
               <h4>Brisket Sandwich and Fries</h4>
-              <p>A Taste of Texas!</p>
+              <p class="italic">A Taste of Texas!</p>
               <p>Smoked Brisked on thick-cut Texas Toast, Cole Slaw, Served with our famous thick-cut french fries</p>
               <p>$7.95</p>
             </div>
@@ -122,19 +138,19 @@
         <h2 class="foodCategory">Beverages</h2>
         <div class="container">
           <div class="row">
-            <div class="col-sm-3 menuItem beverages">
+            <div class="col-md-3 menuItem beverages">
               <h4>Root Beer</h4>
               <p>$3.00</p>
             </div>
-            <div class="col-sm-3 menuItem beverages">
+            <div class="col-md-3 menuItem beverages">
               <h4>Bottled Water</h4>
               <p>$1.25</p>
             </div>
-            <div class="col-sm-3 menuItem beverages">
+            <div class="col-md-3 menuItem beverages">
               <h4>Lemonade</h4>
               <p>$1.00</p>
             </div>
-            <div class="col-sm-3 menuItem beverages">
+            <div class="col-md-3 menuItem beverages">
               <h4>Iced Tea</h4>
               <p>$1.25</p>
             </div>
@@ -149,11 +165,11 @@
         <p>123-456-7890</p>
       </div>
     </footer>
+    <!-- script from scripts file -->
+    <script src="scripts/script.js"></script>
     <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/esm/popper-utils.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap-grid.css"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
