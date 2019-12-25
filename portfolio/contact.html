@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1, shrink to fit=no">
+    <title>Contact Us</title>
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- external css -->
+    <link rel="stylesheet" href="styles/restaurantStyles.css">
+    <style media="screen">
+      .formContainer{
+        margin: 50px 20%
+      }
+      label {
+        width: 35%;
+      }
+      textarea{
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        resize: none;
+      }
+      .contactDayForm label{
+        width: 7%;
+      }
+      #questionForDay {
+        width: 35%;
+      }
+      .nameForm , .emailForm, .phoneForm label {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="">
+        <h1>Vincent's Restaurant</h1>
+        <p>Finest Restaurant in downtown NYC</p>
+      </div>
+    </header>
+    <hr>
+    <div class="navContainer">
+      <nav class="container">
+        <div class="row">
+          <div class="col-sm">
+            <a href="index.html">Home</a>
+          </div>
+          <div class="col-sm">
+            <a href="Menu.html">Menu</a>
+          </div>
+          <div class="col-sm">
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <hr>
+    <div class="formContainer">
+      <form class="form" action="submit.html" method="post">
+        <div class="nameForm">
+          <label for="name">Name: </label>
+          <input type="text" name="name" value="" required> <br> <br>
+        </div>
+        <div class="emailForm">
+          <label for="email">Email: </label>
+          <input type="text" name="email" value="" required> <br> <br>
+        </div>
+        <div class="phoneForm">
+          <label for="phone">Phone: </label>
+          <input type="text" name="phone" value="" required> <br> <br>
+        </div>
+        <div class="inquiryForm">
+          <label for="reasonInquiry">Reason for Inquiry: </label>
+          <select class="Inquiry" name="">
+            <option value="catering" selected>Catering</option>
+            <option value="privateParty">Private Party</option>
+            <option value="Feedback">Feed back</option>
+            <option value="other">Other</option>
+          </select> <br> <br>
+        </div>
+        <div class="addInfoForm">
+          <label for="additionInfo">Addition Information: </label>
+          <textarea name="name" rows="8" cols="80"></textarea> <br> <br>
+        </div>
+        <div class="questionForm">
+          <label for="question">Have you been to the restaurant? </label>
+          <div class="">
+            <input type="radio" id="choice1" name="questionnaire" value="no">
+            <label for="choice1">No</label>
+          </div>
+          <div class="">
+            <input type="radio"id="choice2" name="questionnaire" value="yes">
+            <label for="choice2">Yes</label> <br><br>
+          </div>
+        </div>
+        <div class="contactDayForm">
+          <label for="contactDay" id="questionForDay">Best day to contact you: </label>
+          <input type="checkbox" id="monday" name="monday" value="monday">
+          <label for="monday">M</label>
+          <input type="checkbox" id="tuesday" name="tuesday" value="tuesday">
+          <label for="tuesday">T</label>
+          <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">
+          <label for="wednesday">W</label>
+          <input type="checkbox" id="thrusday" name="thrusday" value="thrusday">
+          <label for="thrusday">Th</label>
+          <input type="checkbox" id="friday" name="friday" value="friday">
+          <label for="friday">F</label> <br> <br>
+        </div>
+        <input type="submit" name="submit" value="Send Request">
+      </form>
+    </div>
+    <footer>
+      <div class="">
+        <p>123 Apple St, New York, NY, 10001</p>
+        <p>123-456-7890</p>
+      </div>
+    </footer>
+    <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/esm/popper-utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap-grid.css"></script>
+  </body>
+</html>

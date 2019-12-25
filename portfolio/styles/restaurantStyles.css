@@ -1,0 +1,68 @@
+
+/* header and footer css */
+header, footer{
+  background-color: #e0fbf6;
+  font-family: roboto;
+  padding: 10px;
+}
+header div h1 {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  margin: auto 0;
+  padding: 15px 0px 0px;
+}
+
+header div p {
+  text-align: center;
+  font-size: 16px;
+  margin: auto 0;
+  padding: 0px 0px 15px 0px;
+}
+
+hr {
+  border-top: 2px dashed black;
+  margin: 3px;
+}
+
+footer div p {
+  font-size: 14px;
+  margin: auto 0;
+  padding: 0px;
+}
+
+.descriptionSection {
+  margin: 0 20%;
+}
+
+body {
+  background-color: #fff2f2;
+}
+
+
+/* nav bar css */
+
+.navContainer {
+  text-align: center;
+  background-color: #9dd9f0;
+}
+
+.col-sm a {
+  font-size: 22px;
+  display: block;
+  padding: 12px 0;
+  color: white;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration-line: none;
+}
+
+a:visited {
+  color: #4b7aff;
+}
+
+a:active {
+  text-decoration-line: none;
+}
