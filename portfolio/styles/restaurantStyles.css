@@ -46,6 +46,10 @@ body {
 
 /* nav bar css */
 
+.homeBtn:hover{
+  font-size: 20px;
+}
+
 a:hover {
   font-weight: bold;
   text-decoration-line: none;

@@ -6,41 +6,45 @@
     <title>Vincent's Restaurant's Menu</title>
     <!-- bootstrap cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
     <!-- external css -->
     <link rel="stylesheet" href="styles/restaurantStyles.css">
+    <!-- icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style media="screen">
       article {
         margin: 30px 10%;
       }
-      .table th {
-        width: 33%;
-        border-color: transparent;
+
+      .row {
+        margin-bottom: 30px;
+      }
+
+      .menuItem h4 {
         text-align: center;
-        font-size: 18px;
+        min-height: 60px;
+        font-weight: 600;
+        margin-bottom: 25px;
       }
-      .table td{
-        border-color: transparent;
-        padding: 10px 10px 0;
+
+      .menuItem p {
         text-align: center;
       }
-      .table-responsive {
-        margin-bottom: 20px;
-      }
-      .shortDescription td{
-        font-style: italic;
-      }
+
       body {
         background-color: #eafde4;
       }
+
       .foodCategory{
         text-align: center;
         font-style: italic;
-        padding: 50px;
+        padding: 60px;
+        font-weight: 700;
       }
-      .beveragetable th {
-        width: 25%;
-        text-align: center;
-        font-size: 18px;
+
+      .beverages h4 {
+        margin-bottom: 0;
       }
     </style>
   </head>
@@ -57,7 +61,7 @@
     <div class="">
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="index.html"><i class="fa fa-home homeBtn"></i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="menu.html">Menu</a>
@@ -71,84 +75,70 @@
     <section>
       <article class="">
         <h2 class="foodCategory">Main Course</h2>
-        <div class="table-responsive">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Burger and Fries</th>
-                <th>Hot Dog and Chips</th>
-                <th>Italian Sausage and Peppers</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="shortDescription">
-                <td>An American Calssic!</td>
-                <td>A Summer Classic!</td>
-                <td>An all-Time Favorite!</td>
-              </tr>
-              <tr>
-                <td>Your choice - with or without cheese, Pickle, onion, tomato, and lettuce, Served with our famous thick cut french fries</td>
-                <td>Your choice - white or wheat bun, Relish, mustard, and ketchup, Served with our house-made chips</td>
-                <td>Your choice - mild or spicy Cole Slaw, Served with garlic mashers</td>
-              </tr>
-              <tr>
-                <td>$7.95</td>
-                <td>$7.95</td>
-                <td>$10.95</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 menuItem">
+              <h4>Burger and Fries</h4>
+              <p>An American Classic!</p>
+              <p>Your choice - with or without cheese, Pickle, onion, tomato, and lettuce, Served with our famous thick cut french fries</p>
+              <p>$7.95</p>
+            </div>
+            <div class="col-sm-4 menuItem">
+              <h4>Hot Dog and Chips</h4>
+              <p>A Summer Classic!</p>
+              <p>Your choice - white or wheat bun, Relish, mustard, and ketchup, Served with our house-made chips</p>
+              <p>$7.95</p>
+            </div>
+            <div class="col-sm-4 menuItem">
+              <h4>Italian Sausage and Peppers</h4>
+              <p>An all-Time Favorite!</p>
+              <p>Your choice - mild or spicy Cole Slaw, Served with garlic mashers</p>
+              <p>$10.95</p>
+            </div>
+          </div>
         </div>
-        <div class="table-responsive">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Tenderloin Sandwich and Chips</th>
-                <th>House Salad</th>
-                <th>Brisket Sandwich and Fries</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="shortDescription">
-                <td>Really Hits the Spot!</td>
-                <td>On the Lighter Side</td>
-                <td>A Taste of Texas!</td>
-              </tr>
-              <tr>
-                <td>Plain of Sesame Seed Bun, Pickle, onion, tomato, and lettuce, Served with our house-made chips</td>
-                <td>Your choice - with or without cheese, Iceberg lettuce, tomatoes, peppers, Thousand Island or Ranch, dressing Served with a dinner roll</td>
-                <td>Smoked Brisked on thick-cut Texas Toast, Cole Slaw, Served with our famous thick-cut french fries</td>
-              </tr>
-              <tr>
-                <td>$8.95</td>
-                <td>$6.95</td>
-                <td>$7.95</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 menuItem">
+              <h4>Tenderloin Sandwich and Chips</h4>
+              <p>Really Hits the Spot!</p>
+              <p>Plain of Sesame Seed Bun, Pickle, onion, tomato, and lettuce, Served with our house-made chips</p>
+              <p>$8.95</p>
+            </div>
+            <div class="col-sm-4 menuItem">
+              <h4>House Salad</h4>
+              <p>On the Lighter Side</p>
+              <p>Your choice - with or without cheese, Iceberg lettuce, tomatoes, peppers, Thousand Island or Ranch, dressing Served with a dinner roll</p>
+              <p>$6.95</p>
+            </div>
+            <div class="col-sm-4 menuItem">
+              <h4>Brisket Sandwich and Fries</h4>
+              <p>A Taste of Texas!</p>
+              <p>Smoked Brisked on thick-cut Texas Toast, Cole Slaw, Served with our famous thick-cut french fries</p>
+              <p>$7.95</p>
+            </div>
+          </div>
         </div>
         <h2 class="foodCategory">Beverages</h2>
-        <div class="table-responsive">
-          <table class="table beveragetable">
-            <thead>
-              <tr>
-                <th>Root Bear</th>
-                <th>Bottled Water</th>
-                <th>Lemonade</th>
-                <th>Iced Tea</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>$3.00</td>
-                <td>$1.25</td>
-                <td>$1.00</td>
-                <td>$1.25</td>
-              </tr>
-            </tbody>
-
-          </table>
-
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3 menuItem beverages">
+              <h4>Root Beer</h4>
+              <p>$3.00</p>
+            </div>
+            <div class="col-sm-3 menuItem beverages">
+              <h4>Bottled Water</h4>
+              <p>$1.25</p>
+            </div>
+            <div class="col-sm-3 menuItem beverages">
+              <h4>Lemonade</h4>
+              <p>$1.00</p>
+            </div>
+            <div class="col-sm-3 menuItem beverages">
+              <h4>Iced Tea</h4>
+              <p>$1.25</p>
+            </div>
+          </div>
         </div>
       </article>
     </section>
